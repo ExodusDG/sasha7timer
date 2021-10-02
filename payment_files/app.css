@@ -17480,3 +17480,45 @@ input[type=file] {
         margin-bottom: 40px
     }
 }
+@media (max-height: 640px) {
+    .slider__block {
+        width: 100%;
+        height: 250px !important;
+    }
+    
+    .tariff-card-info {
+        text-align: center;
+        margin-top: 25px !important;
+    }
+    
+    .sale__text {
+        font-size: 15px !important;
+    }
+    
+    .tariff-card {
+        height: 220px !important;
+    }
+    
+    .tariff-card-mob {
+        bottom: 25px !important;
+    }
+    
+    body {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem;
+    }
+    
+    .tariff-card-bottom-price {
+        color: #b0b0b0;
+        margin-top: 0;
+        text-align: center;
+        position: relative !important;
+        bottom: 0px !important;
+        left: 0 !important;
+        margin: 0 auto !important;
+    }
+    
+    .carousel-icon-subtitle {
+        font-size: 15px !important;
+    }
+}
