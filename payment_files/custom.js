@@ -30,18 +30,7 @@ $('.tariff-card').click(function() {
 
 /* PRICE TIMER */
 
-/*
-1. Парс всех значений цен
-2. Запуск функции по уменбшению цен в 2 раза
-3. Задержка в 0.5 сек
-4. Запуск функции по уменьшению цен
-5. Popup 1
-6. Popup 2
-
-
-firstDiscound = 17.5%
-secondDiscount = 35%
-*/
+var discountStartTime = 2000;
 
 var animationTime = 2000;
 
@@ -185,7 +174,7 @@ setTimeout(() => {
         $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
 
     }, discount1FirstTime);
-}, 2000);
+}, discountStartTime);
 
 
 
