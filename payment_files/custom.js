@@ -34,13 +34,13 @@ var discountStartTime = 2000;
 
 var animationTime = 2000;
 
-var discount6Price = $('[data-action$="select6Month"]').find('.tariff-card-price-cost').text().replace('R$', '').replace('.', '');
-var discount3Price = $('[data-action$="select3Month"]').find('.tariff-card-price-cost').text().replace('R$', '').replace('.', '');
-var discount1Price = $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text().replace('R$', '').replace('.', '');
+var discount6Price = $('[data-action$="select6Month"]').find('.tariff-card-price-cost').text().replace('R$', '').replace(',', '');
+var discount3Price = $('[data-action$="select3Month"]').find('.tariff-card-price-cost').text().replace('R$', '').replace(',', '');
+var discount1Price = $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text().replace('R$', '').replace(',', '');
 
-var discount6Full = $('[data-action$="select6Month"]').find('.tariff-card-bottom-price').text().replace('R$', '').replace('.', '');
-var discount3Full = $('[data-action$="select3Month"]').find('.tariff-card-bottom-price').text().replace('R$', '').replace('.', '');
-var discount1Full = $('[data-action$="select1Month"]').find('.tariff-card-bottom-price').text().replace('R$', '').replace('.', '');
+var discount6Full = $('[data-action$="select6Month"]').find('.tariff-card-bottom-price').text().replace('R$', '').replace(',', '');
+var discount3Full = $('[data-action$="select3Month"]').find('.tariff-card-bottom-price').text().replace('R$', '').replace(',', '');
+var discount1Full = $('[data-action$="select1Month"]').find('.tariff-card-bottom-price').text().replace('R$', '').replace(',', '');
 
 console.log(discount6Price + ' || ' + discount3Price + ' || ' + discount1Price)
 console.log(discount6Full + ' || ' + discount3Full + ' || ' + discount1Full)
@@ -69,12 +69,12 @@ setTimeout(() => {
                 var discount6Second = setInterval(() => {
                     discount6Price = discount6Price - 1;
                     var finalText = 'R$' + discount6Price
-                    $('[data-action$="select6Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
+                    $('[data-action$="select6Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ",$1"))
                     if (discount6Price < discount6SecondStop) {
                         console.log('SECOND DONE')
                         var discount6FullSecond = Math.round(discount6Full * 0.5);
 
-                        $('[data-action$="select6Month"]').find('.tariff-card-bottom-price').text('R$' + discount6FullSecond.toString().replace(/(..)$/, ".$1"))
+                        $('[data-action$="select6Month"]').find('.tariff-card-bottom-price').text('R$' + discount6FullSecond.toString().replace(/(..)$/, ",$1"))
 
                         setTimeout(() => {
                             discountPopupStart()
@@ -88,7 +88,7 @@ setTimeout(() => {
 
             clearInterval(discount6First);
         }
-        $('[data-action$="select6Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
+        $('[data-action$="select6Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ",$1"))
 
     }, discount6FirstTime);
 
@@ -114,12 +114,12 @@ setTimeout(() => {
                 var discount3Second = setInterval(() => {
                     discount3Price = discount3Price - 1;
                     var finalText = 'R$' + discount3Price
-                    $('[data-action$="select3Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
+                    $('[data-action$="select3Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ",$1"))
                     if (discount3Price < discount3SecondStop) {
                         console.log('SECOND DONE')
                         var discount3FullSecond = Math.round(discount3Full * 0.5);
 
-                        $('[data-action$="select3Month"]').find('.tariff-card-bottom-price').text('R$' + discount3FullSecond.toString().replace(/(..)$/, ".$1"))
+                        $('[data-action$="select3Month"]').find('.tariff-card-bottom-price').text('R$' + discount3FullSecond.toString().replace(/(..)$/, ",$1"))
 
 
                         clearInterval(discount3Second);
@@ -130,7 +130,7 @@ setTimeout(() => {
 
             clearInterval(discount3First);
         }
-        $('[data-action$="select3Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
+        $('[data-action$="select3Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ",$1"))
 
     }, discount3FirstTime);
 
@@ -156,12 +156,12 @@ setTimeout(() => {
                 var discount1Second = setInterval(() => {
                     discount1Price = discount1Price - 1.5;
                     var finalText = 'R$' + Math.round(discount1Price, 1)
-                    $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
+                    $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ",$1"))
                     if (discount1Price < discount1SecondStop) {
                         console.log('SECOND DONE')
                         var discount1FullSecond = Math.round(discount1Full * 0.5);
 
-                        $('[data-action$="select1Month"]').find('.tariff-card-bottom-price').text('R$' + discount1FullSecond.toString().replace(/(..)$/, ".$1"))
+                        $('[data-action$="select1Month"]').find('.tariff-card-bottom-price').text('R$' + discount1FullSecond.toString().replace(/(..)$/, ",$1"))
 
                         clearInterval(discount1Second);
                     }
@@ -171,7 +171,7 @@ setTimeout(() => {
 
             clearInterval(discount1First);
         }
-        $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ".$1"))
+        $('[data-action$="select1Month"]').find('.tariff-card-price-cost').text(finalText.toString().replace(/(..)$/, ",$1"))
 
     }, discount1FirstTime);
 }, discountStartTime);

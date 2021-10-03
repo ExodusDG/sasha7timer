@@ -17557,12 +17557,17 @@ input[type=file] {
     }
     
     .gradient__line {
-        height: 4px;
+        height: 2px;
         width: 100%;
         margin: 0 auto;
         background: linear-gradient(#de6489, #bb6fc2);
         position: relative;
         bottom: 10px;
+    }
+    
+    .bottom_price_no {
+        position: absolute;
+        top: 15px !important;
     }
     
     .tariff-card-bottom-price {
