@@ -17594,4 +17594,26 @@ input[type=file] {
         transform: translateY(-20px) scale(1.1)!important;
         position: relative;
     }
+    
+    .tariff-card-bottom-price {
+        bottom: 0px !important;
+    }
+    
+    .bottom_price_no {
+        position: absolute;
+        top: 25px !important;
+    }
+    
+    .tariff-card-bottom-price_active {
+        bottom: 10px !important;
+    }
+    
+    .bottom_price_no_active {
+        top: 15px !important;
+    }
+    
+    .grad__no_discount {
+        top: 15.5px !important;
+        position: relative;
+    }
 }
