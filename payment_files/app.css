@@ -14854,8 +14854,16 @@ img.mask {
         margin: 0 auto;
         left: 0
     }
+    
+    .tariff-card-adv-active span {
+        color: white !important;
+    }
 }
 @media (max-width:491px) {
+    .tariff-card-adv span {
+        color: #b0b0b0;
+    }
+    
     .slider__block_title {
         font-size: 20px
     }
@@ -17480,7 +17488,7 @@ input[type=file] {
         margin-bottom: 40px
     }
 }
-@media (max-height: 640px) {
+@media (max-width: 490px) {
     .slider__block {
         width: 100%;
         height: 250px !important;
