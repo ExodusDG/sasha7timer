@@ -17616,4 +17616,12 @@ input[type=file] {
         top: 15.5px !important;
         position: relative;
     }
+    
+    .discount__number {
+        padding-top: 4px !important;
+    }
+    
+    .discount__blocks {
+        width: 29% !important;
+    }
 }
