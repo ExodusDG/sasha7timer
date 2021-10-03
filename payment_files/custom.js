@@ -10,6 +10,8 @@ $('.tariff-card').click(function() {
     $('.tariff-card-discount').removeClass('card-gradient-discount-active');
     $('.tariff-card-price-cost').removeClass('tariff-card-price-cost-active');
     $('.gradient__line').removeClass('gradient__line_noactive');
+    $('.tariff-card-bottom-price').removeClass('tariff-card-bottom-price_active');
+    $('.bottom_price_no').removeClass('bottom_price_no_active');
 
     $(this).addClass('tariff-card-active');
     $(this)
@@ -26,6 +28,12 @@ $('.tariff-card').click(function() {
     $(this)
         .find('.gradient__line')
         .addClass('gradient__line_noactive');
+    $(this)
+        .find('.tariff-card-bottom-price')
+        .addClass('tariff-card-bottom-price_active');
+    $(this)
+        .find('.bottom_price_no')
+        .addClass('bottom_price_no_active');
 })
 
 /* PRICE TIMER */
